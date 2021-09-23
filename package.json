@@ -1,0 +1,25 @@
+{
+  "name": "rpachallenge",
+  "version": "1.0.0",
+  "description": "RPA Challenger and RPA StockMarket",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericlacerda/rpachallenge.git"
+  },
+  "author": "Eric Lacerda",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ericlacerda/rpachallenge/issues"
+  },
+  "homepage": "https://github.com/ericlacerda/rpachallenge#readme",
+  "dependencies": {
+    "delay": "^5.0.0",
+    "exceljs": "^4.3.0",
+    "playwright": "^1.15.0",
+    "selenium-webdriver": "^4.0.0-rc-1"
+  }
+}
