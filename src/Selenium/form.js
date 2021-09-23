@@ -4,14 +4,14 @@ const chrome = require('selenium-webdriver/chrome');
 const buttonStartSelector = ".instructions button.waves-effect"
 
 
-
+// -- ABRE O CHROMEDRIVER -- 
 const openPage = async (targetPage) => {
         
     let driver = await new Builder().forBrowser("chrome").build();
     await driver.get(targetPage);
     return driver;
 }
-
+// -- PREENCHER OS CAMPOS -- 
 const fillFormData = async (driver, row) => {
     try {
         Object.keys(row).forEach(async key => {
@@ -33,12 +33,10 @@ const forms = async (targetPage, rows) => {
     try {
         driver = await openPage(targetPage);
         await driver.findElement(By.css(buttonStartSelector)).click();
-
         for (const row of rows) {
             await driver.wait(until.elementLocated(By.css('form div.row')), 5000);
             await fillFormData(driver, row);
-        }
-        
+        }        
         await driver.wait(until.elementLocated(By.css('.congratulations .message1')), 5000);
         retorno = await driver.findElement(By.css('.message2')).getText();
 

@@ -19,7 +19,9 @@
   "dependencies": {
     "delay": "^5.0.0",
     "exceljs": "^4.3.0",
+    "json-2-csv": "^3.14.4",
     "playwright": "^1.15.0",
+    "request": "^2.88.2",
     "selenium-webdriver": "^4.0.0-rc-1"
   }
 }
